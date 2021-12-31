@@ -1,0 +1,10 @@
+E:\ThiCSLT2\ThiCSLT2\bin\Debug\ThiCSLT2.exe.config
+E:\ThiCSLT2\ThiCSLT2\bin\Debug\ThiCSLT2.exe
+E:\ThiCSLT2\ThiCSLT2\bin\Debug\ThiCSLT2.pdb
+E:\ThiCSLT2\ThiCSLT2\obj\Debug\ThiCSLT2.csproj.AssemblyReference.cache
+E:\ThiCSLT2\ThiCSLT2\obj\Debug\ThiCSLT2.anhsanpham.resources
+E:\ThiCSLT2\ThiCSLT2\obj\Debug\ThiCSLT2.Properties.Resources.resources
+E:\ThiCSLT2\ThiCSLT2\obj\Debug\ThiCSLT2.csproj.GenerateResource.cache
+E:\ThiCSLT2\ThiCSLT2\obj\Debug\ThiCSLT2.csproj.CoreCompileInputs.cache
+E:\ThiCSLT2\ThiCSLT2\obj\Debug\ThiCSLT2.exe
+E:\ThiCSLT2\ThiCSLT2\obj\Debug\ThiCSLT2.pdb
