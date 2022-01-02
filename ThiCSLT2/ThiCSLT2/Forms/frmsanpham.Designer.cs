@@ -66,6 +66,7 @@ namespace ThiCSLT2
             this.btndong = new System.Windows.Forms.Button();
             this.btnboqua = new System.Windows.Forms.Button();
             this.txtanh = new System.Windows.Forms.TextBox();
+            this.Ảnh = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.anhsanpham)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridView)).BeginInit();
             this.SuspendLayout();
@@ -287,6 +288,8 @@ namespace ThiCSLT2
             // DataGridView
             // 
             this.DataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Ảnh});
             this.DataGridView.Location = new System.Drawing.Point(25, 461);
             this.DataGridView.Name = "DataGridView";
             this.DataGridView.RowHeadersWidth = 62;
@@ -418,6 +421,13 @@ namespace ThiCSLT2
             this.txtanh.Size = new System.Drawing.Size(206, 26);
             this.txtanh.TabIndex = 35;
             // 
+            // Ảnh
+            // 
+            this.Ảnh.HeaderText = "Ảnh";
+            this.Ảnh.MinimumWidth = 8;
+            this.Ảnh.Name = "Ảnh";
+            this.Ảnh.Width = 150;
+            // 
             // frmsanpham
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -507,6 +517,7 @@ namespace ThiCSLT2
         private System.Windows.Forms.Button btndong;
         private System.Windows.Forms.Button btnboqua;
         private System.Windows.Forms.TextBox txtanh;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Ảnh;
     }
 }
 
