@@ -16,7 +16,7 @@ namespace ThiCSLT2
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new anhsanpham());
+            Application.Run(new frmsanpham());
         }
     }
 }
