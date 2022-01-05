@@ -30,72 +30,31 @@ namespace ThiCSLT2.Forms
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmchatlieu));
-            this.btnthem = new System.Windows.Forms.Button();
-            this.btnluu = new System.Windows.Forms.Button();
-            this.btnsua = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.DataGridView = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtmachatlieu = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.txttenchatlieu = new System.Windows.Forms.TextBox();
+            this.btnthem = new System.Windows.Forms.Button();
+            this.btnsua = new System.Windows.Forms.Button();
+            this.btnxoa = new System.Windows.Forms.Button();
+            this.btnluu = new System.Windows.Forms.Button();
+            this.btnboqua = new System.Windows.Forms.Button();
+            this.btndong = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.DataGridView)).BeginInit();
             this.SuspendLayout();
             // 
-            // btnthem
+            // DataGridView
             // 
-            this.btnthem.Image = ((System.Drawing.Image)(resources.GetObject("btnthem.Image")));
-            this.btnthem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnthem.Location = new System.Drawing.Point(41, 383);
-            this.btnthem.Name = "btnthem";
-            this.btnthem.Size = new System.Drawing.Size(113, 34);
-            this.btnthem.TabIndex = 28;
-            this.btnthem.Text = "Thêm";
-            this.btnthem.UseVisualStyleBackColor = true;
-            // 
-            // btnluu
-            // 
-            this.btnluu.Image = ((System.Drawing.Image)(resources.GetObject("btnluu.Image")));
-            this.btnluu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnluu.Location = new System.Drawing.Point(195, 378);
-            this.btnluu.Name = "btnluu";
-            this.btnluu.Size = new System.Drawing.Size(113, 39);
-            this.btnluu.TabIndex = 29;
-            this.btnluu.Text = "Lưu";
-            this.btnluu.UseVisualStyleBackColor = true;
-            // 
-            // btnsua
-            // 
-            this.btnsua.Image = ((System.Drawing.Image)(resources.GetObject("btnsua.Image")));
-            this.btnsua.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnsua.Location = new System.Drawing.Point(349, 378);
-            this.btnsua.Name = "btnsua";
-            this.btnsua.Size = new System.Drawing.Size(114, 34);
-            this.btnsua.TabIndex = 30;
-            this.btnsua.Text = "Sửa";
-            this.btnsua.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(493, 377);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(113, 35);
-            this.button1.TabIndex = 34;
-            this.button1.Text = "Xóa";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(41, 208);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 62;
-            this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(566, 150);
-            this.dataGridView1.TabIndex = 35;
+            this.DataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DataGridView.Location = new System.Drawing.Point(52, 221);
+            this.DataGridView.Name = "DataGridView";
+            this.DataGridView.RowHeadersWidth = 62;
+            this.DataGridView.RowTemplate.Height = 28;
+            this.DataGridView.Size = new System.Drawing.Size(673, 150);
+            this.DataGridView.TabIndex = 35;
+            this.DataGridView.Click += new System.EventHandler(this.DataGridView_Click);
             // 
             // label1
             // 
@@ -106,12 +65,12 @@ namespace ThiCSLT2.Forms
             this.label1.TabIndex = 36;
             this.label1.Text = "DANH MỤC CHẤT LIỆU";
             // 
-            // textBox1
+            // txtmachatlieu
             // 
-            this.textBox1.Location = new System.Drawing.Point(153, 75);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 26);
-            this.textBox1.TabIndex = 37;
+            this.txtmachatlieu.Location = new System.Drawing.Point(153, 75);
+            this.txtmachatlieu.Name = "txtmachatlieu";
+            this.txtmachatlieu.Size = new System.Drawing.Size(188, 26);
+            this.txtmachatlieu.TabIndex = 37;
             // 
             // label2
             // 
@@ -131,47 +90,129 @@ namespace ThiCSLT2.Forms
             this.label3.TabIndex = 39;
             this.label3.Text = "Tên chất liệu";
             // 
-            // textBox2
+            // txttenchatlieu
             // 
-            this.textBox2.Location = new System.Drawing.Point(153, 128);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 26);
-            this.textBox2.TabIndex = 40;
+            this.txttenchatlieu.Location = new System.Drawing.Point(153, 128);
+            this.txttenchatlieu.Name = "txttenchatlieu";
+            this.txttenchatlieu.Size = new System.Drawing.Size(188, 26);
+            this.txttenchatlieu.TabIndex = 40;
+            // 
+            // btnthem
+            // 
+            this.btnthem.Image = ((System.Drawing.Image)(resources.GetObject("btnthem.Image")));
+            this.btnthem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnthem.Location = new System.Drawing.Point(51, 387);
+            this.btnthem.Name = "btnthem";
+            this.btnthem.Size = new System.Drawing.Size(91, 37);
+            this.btnthem.TabIndex = 41;
+            this.btnthem.Text = "Thêm";
+            this.btnthem.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnthem.UseVisualStyleBackColor = true;
+            this.btnthem.Click += new System.EventHandler(this.btnthem_Click);
+            // 
+            // btnsua
+            // 
+            this.btnsua.Image = ((System.Drawing.Image)(resources.GetObject("btnsua.Image")));
+            this.btnsua.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnsua.Location = new System.Drawing.Point(173, 387);
+            this.btnsua.Name = "btnsua";
+            this.btnsua.Size = new System.Drawing.Size(93, 36);
+            this.btnsua.TabIndex = 42;
+            this.btnsua.Text = "Sửa";
+            this.btnsua.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnsua.UseVisualStyleBackColor = true;
+            this.btnsua.Click += new System.EventHandler(this.btnsua_Click);
+            // 
+            // btnxoa
+            // 
+            this.btnxoa.Image = ((System.Drawing.Image)(resources.GetObject("btnxoa.Image")));
+            this.btnxoa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnxoa.Location = new System.Drawing.Point(292, 387);
+            this.btnxoa.Name = "btnxoa";
+            this.btnxoa.Size = new System.Drawing.Size(87, 37);
+            this.btnxoa.TabIndex = 43;
+            this.btnxoa.Text = "Xóa";
+            this.btnxoa.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnxoa.UseVisualStyleBackColor = true;
+            this.btnxoa.Click += new System.EventHandler(this.btnxoa_Click);
+            // 
+            // btnluu
+            // 
+            this.btnluu.Image = ((System.Drawing.Image)(resources.GetObject("btnluu.Image")));
+            this.btnluu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnluu.Location = new System.Drawing.Point(404, 388);
+            this.btnluu.Name = "btnluu";
+            this.btnluu.Size = new System.Drawing.Size(84, 39);
+            this.btnluu.TabIndex = 44;
+            this.btnluu.Text = "Lưu";
+            this.btnluu.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnluu.UseVisualStyleBackColor = true;
+            this.btnluu.Click += new System.EventHandler(this.btnluu_Click);
+            // 
+            // btnboqua
+            // 
+            this.btnboqua.Image = ((System.Drawing.Image)(resources.GetObject("btnboqua.Image")));
+            this.btnboqua.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnboqua.Location = new System.Drawing.Point(504, 388);
+            this.btnboqua.Name = "btnboqua";
+            this.btnboqua.Size = new System.Drawing.Size(106, 39);
+            this.btnboqua.TabIndex = 48;
+            this.btnboqua.Text = "Bỏ qua";
+            this.btnboqua.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnboqua.UseVisualStyleBackColor = true;
+            this.btnboqua.Click += new System.EventHandler(this.btnboqua_Click);
+            // 
+            // btndong
+            // 
+            this.btndong.Image = ((System.Drawing.Image)(resources.GetObject("btndong.Image")));
+            this.btndong.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btndong.Location = new System.Drawing.Point(627, 387);
+            this.btndong.Name = "btndong";
+            this.btndong.Size = new System.Drawing.Size(98, 39);
+            this.btndong.TabIndex = 49;
+            this.btndong.Text = "Đóng";
+            this.btndong.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btndong.UseVisualStyleBackColor = true;
+            this.btndong.Click += new System.EventHandler(this.btndong_Click);
             // 
             // frmchatlieu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.btndong);
+            this.Controls.Add(this.btnboqua);
+            this.Controls.Add(this.btnluu);
+            this.Controls.Add(this.btnxoa);
+            this.Controls.Add(this.btnsua);
+            this.Controls.Add(this.btnthem);
+            this.Controls.Add(this.txttenchatlieu);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtmachatlieu);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.btnsua);
-            this.Controls.Add(this.btnluu);
-            this.Controls.Add(this.btnthem);
+            this.Controls.Add(this.DataGridView);
             this.Name = "frmchatlieu";
             this.Text = "Chất liệu";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.frmchatlieu_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.DataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btnthem;
-        private System.Windows.Forms.Button btnluu;
-        private System.Windows.Forms.Button btnsua;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView DataGridView;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtmachatlieu;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txttenchatlieu;
+        private System.Windows.Forms.Button btnthem;
+        private System.Windows.Forms.Button btnsua;
+        private System.Windows.Forms.Button btnxoa;
+        private System.Windows.Forms.Button btnluu;
+        private System.Windows.Forms.Button btnboqua;
+        private System.Windows.Forms.Button btndong;
     }
 }

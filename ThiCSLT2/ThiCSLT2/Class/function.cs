@@ -16,7 +16,7 @@ namespace ThiCSLT2.Class
         public static void Connect()
         {
             Conn = new SqlConnection();
-            ConnString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=E:\\QLCHgiaydep\\QLCHgiaydep\\ThiCSLT2\\ThiCSLT2\\database\\Database1.mdf;Integrated Security=True;Connect Timeout=30";
+            ConnString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=E:\\QLCHgiaydep\\QLCHgiaydep\\ThiCSLT2\\ThiCSLT2\\database\\BTL_QLGD.mdf;Integrated Security=True;Connect Timeout=30";
             Conn.ConnectionString = ConnString;
             Conn.Open();
         }
@@ -91,8 +91,8 @@ namespace ThiCSLT2.Class
             DataTable bang = new DataTable();
             a.Fill(bang);
             cbo.DataSource = bang;
-            cbo.ValueMember = ma;    // Truong gia tri
-            cbo.DisplayMember = ten;    // Truong hien thi
+            cbo.ValueMember = ma;   
+            cbo.DisplayMember = ten;   
         }
         public static string GetFieldValues(string sql)
         {

@@ -97,7 +97,7 @@ namespace ThiCSLT2
                 txttengiaydep.Text = "";
                 return;
             }
-            sql = "INSERT INTO tblHanghoa (magiaydep,tengiaydep,mamau,machatlieu,maco,madoituong,maloai,mamua,manuocsx,soluong,dongianhap,dongiaban,anh) VALUES(N'"
+            sql = "INSERT INTO tblsanpham (magiaydep,tengiaydep,mamau,machatlieu,maco,madoituong,maloai,mamua,manuocsx,soluong,dongianhap,dongiaban,anh) VALUES(N'"
                 + txtmagiaydep.Text.Trim() +
                 "',N'" + txttengiaydep.Text.Trim() +
                 "',N'" + cbomamau.SelectedValue.ToString() +
@@ -124,7 +124,6 @@ namespace ThiCSLT2
 
         private void frmsanpham_Load(object sender, EventArgs e)
         {
-            Class.function.Connect();
             txtmagiaydep.Enabled = false;
             btnluu.Enabled = false;
             btnboqua.Enabled = false;
@@ -141,7 +140,7 @@ namespace ThiCSLT2
             cbomaco.SelectedIndex = -1;
             function.FillCombo("Select madoituong from tbldoituong", cbomadoituong, "madoituong", "tendoituong");
             cbomadoituong.SelectedIndex = -1;
-            function.FillCombo("Select manuocsx from tblnuocsx", cbomanuocsx, "manuocsx", "tennuocsx");
+            function.FillCombo("Select manuocsx from tblnuocsanxuat", cbomanuocsx, "manuocsx", "tennuocsx");
             cbomanuocsx.SelectedIndex = -1;
             ResetValues();
         }
@@ -162,9 +161,9 @@ namespace ThiCSLT2
             DataGridView.Columns[8].HeaderText = "Mã mùa";
             DataGridView.Columns[9].HeaderText = "Mã nước SX";
             DataGridView.Columns[10].HeaderText = "Số lượng";
-            DataGridView.Columns[11].HeaderText = "Đơn giá nhập";
-            DataGridView.Columns[12].HeaderText = "Đơn giá bán";
-            DataGridView.Columns[13].HeaderText = "Ảnh";
+            DataGridView.Columns[12].HeaderText = "Đơn giá nhập";
+            DataGridView.Columns[13].HeaderText = "Đơn giá bán";
+            DataGridView.Columns[11].HeaderText = "Ảnh";
             DataGridView.AllowUserToAddRows = false;
             DataGridView.EditMode = DataGridViewEditMode.EditProgrammatically;
         }
@@ -201,12 +200,11 @@ namespace ThiCSLT2
             }
             if (tblsp.Rows.Count == 0)
             {
-                MessageBox.Show("Không có dữ liệu!", "Thông báo", MessageBoxButtons.OK,
-  MessageBoxIcon.Information);
+                MessageBox.Show("Không có dữ liệu!", "Thông báo", MessageBoxButtons.OK,MessageBoxIcon.Information);
                 return;
             }
-            txtmagiaydep.Text = DataGridView.CurrentRow.Cells["Mahang"].Value.ToString();
-            txttengiaydep.Text = DataGridView.CurrentRow.Cells["Tenhang"].Value.ToString();
+            txtmagiaydep.Text = DataGridView.CurrentRow.Cells["magiaydep"].Value.ToString();
+            txttengiaydep.Text = DataGridView.CurrentRow.Cells["tengiaydep"].Value.ToString();
             ma = DataGridView.CurrentRow.Cells["mamau"].Value.ToString();
             sql = "select tenmau from tblmau where mamau =N'" + ma + "'";
             cbomamau.Text = function.GetFieldValues(sql);
@@ -223,15 +221,15 @@ namespace ThiCSLT2
             sql = "select tendoituong from tbldoituong where madoituong =N'" + ma + "'";
             cbomadoituong.Text = function.GetFieldValues(sql);
             ma = DataGridView.CurrentRow.Cells["manuocsx"].Value.ToString();
-            sql = "select tennuocsx from tblnuocsx where manuocsx =N'" + ma + "'";
-            cbomadoituong.Text = function.GetFieldValues(sql);
+            sql = "select tennuocsx from tblnuocsanxuat where manuocsx =N'" + ma + "'";
+            cbomanuocsx.Text = function.GetFieldValues(sql);
             ma = DataGridView.CurrentRow.Cells["maloai"].Value.ToString();
-            sql = "select tenloaifrom tbltheloai where maloai =N'" + ma + "'";
+            sql = "select tenloai from tbltheloai where maloai =N'" + ma + "'";
             cbomaloai.Text = function.GetFieldValues(sql);
-            txtsoluong.Text = DataGridView.CurrentRow.Cells["soluong"].Value.ToString();
+            txtsoluong.Text = DataGridView.CurrentRow.Cells["soluong"].Value.ToString();   
+            sql = "select anh from tblsanpham where magiaydep = N'" + txtmagiaydep.Text + "'";
             txtdongianhap.Text = DataGridView.CurrentRow.Cells["dongianhap"].Value.ToString();
             txtdongiaban.Text = DataGridView.CurrentRow.Cells["dongiaban"].Value.ToString();
-            sql = "select anh from tblsanpham where magiaydep = N'" + txtmagiaydep.Text + "'";
             txtanh.Text = function.GetFieldValues(sql);
             anhsanpham.Image = Image.FromFile(txtanh.Text);
             btnxoa.Enabled = true;
@@ -383,6 +381,21 @@ namespace ThiCSLT2
         private void btndong_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnthem_Click(object sender, EventArgs e)
+        {
+            btnsua.Enabled = false;
+            btnxoa.Enabled = false;
+            btnboqua.Enabled = true;
+            btnluu.Enabled = true;
+            btnthem.Enabled = false;
+            ResetValues();
+            txtmagiaydep.Enabled = true;
+            txtmagiaydep.Focus();
+            txtsoluong.Enabled = true;
+            txtdongianhap.Enabled = true;
+            txtdongiaban.Enabled = true;
         }
     }
 }

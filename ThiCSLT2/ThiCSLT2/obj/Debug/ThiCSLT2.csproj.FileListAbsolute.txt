@@ -29,7 +29,6 @@ E:\QLCHgiaydep\QLCHgiaydep\ThiCSLT2\ThiCSLT2\obj\Debug\ThiCSLT2.csproj.AssemblyR
 E:\QLCHgiaydep\QLCHgiaydep\ThiCSLT2\ThiCSLT2\obj\Debug\ThiCSLT2.Forms.frmchatlieu.resources
 E:\QLCHgiaydep\QLCHgiaydep\ThiCSLT2\ThiCSLT2\obj\Debug\ThiCSLT2.Forms.frmco.resources
 E:\QLCHgiaydep\QLCHgiaydep\ThiCSLT2\ThiCSLT2\obj\Debug\ThiCSLT2.Forms.frmdoituong.resources
-E:\QLCHgiaydep\QLCHgiaydep\ThiCSLT2\ThiCSLT2\obj\Debug\ThiCSLT2.Forms.frmmaloai.resources
 E:\QLCHgiaydep\QLCHgiaydep\ThiCSLT2\ThiCSLT2\obj\Debug\ThiCSLT2.Forms.frmmua.resources
 E:\QLCHgiaydep\QLCHgiaydep\ThiCSLT2\ThiCSLT2\obj\Debug\ThiCSLT2.frmsanpham.resources
 E:\QLCHgiaydep\QLCHgiaydep\ThiCSLT2\ThiCSLT2\obj\Debug\ThiCSLT2.Properties.Resources.resources
@@ -37,3 +36,9 @@ E:\QLCHgiaydep\QLCHgiaydep\ThiCSLT2\ThiCSLT2\obj\Debug\ThiCSLT2.csproj.GenerateR
 E:\QLCHgiaydep\QLCHgiaydep\ThiCSLT2\ThiCSLT2\obj\Debug\ThiCSLT2.csproj.CoreCompileInputs.cache
 E:\QLCHgiaydep\QLCHgiaydep\ThiCSLT2\ThiCSLT2\obj\Debug\ThiCSLT2.exe
 E:\QLCHgiaydep\QLCHgiaydep\ThiCSLT2\ThiCSLT2\obj\Debug\ThiCSLT2.pdb
+E:\QLCHgiaydep\QLCHgiaydep\ThiCSLT2\ThiCSLT2\obj\Debug\ThiCSLT2.Forms.frmtheloai.resources
+E:\QLCHgiaydep\QLCHgiaydep\ThiCSLT2\ThiCSLT2\obj\Debug\ThiCSLT2.Forms.frmmain.resources
+E:\QLCHgiaydep\QLCHgiaydep\ThiCSLT2\ThiCSLT2\obj\Debug\ThiCSLT2.Forms.frmmau.resources
+E:\QLCHgiaydep\QLCHgiaydep\ThiCSLT2\ThiCSLT2\obj\Debug\ThiCSLT2.Forms.frmnuocsx.resources
+E:\QLCHgiaydep\QLCHgiaydep\ThiCSLT2\ThiCSLT2\obj\Debug\ThiCSLT2.Forms.frmdangnhap.resources
+E:\QLCHgiaydep\QLCHgiaydep\ThiCSLT2\ThiCSLT2\obj\Debug\ThiCSLT2.Forms.frmdangky.resources

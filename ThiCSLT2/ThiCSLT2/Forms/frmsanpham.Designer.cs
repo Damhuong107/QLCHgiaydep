@@ -55,6 +55,7 @@ namespace ThiCSLT2
             this.cbomamau = new System.Windows.Forms.ComboBox();
             this.cbomanuocsx = new System.Windows.Forms.ComboBox();
             this.DataGridView = new System.Windows.Forms.DataGridView();
+            this.Ảnh = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnthem = new System.Windows.Forms.Button();
             this.btnluu = new System.Windows.Forms.Button();
             this.btnsua = new System.Windows.Forms.Button();
@@ -66,7 +67,6 @@ namespace ThiCSLT2
             this.btndong = new System.Windows.Forms.Button();
             this.btnboqua = new System.Windows.Forms.Button();
             this.txtanh = new System.Windows.Forms.TextBox();
-            this.Ảnh = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.anhsanpham)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridView)).BeginInit();
             this.SuspendLayout();
@@ -298,6 +298,13 @@ namespace ThiCSLT2
             this.DataGridView.TabIndex = 24;
             this.DataGridView.Click += new System.EventHandler(this.DataGridView_Click);
             // 
+            // Ảnh
+            // 
+            this.Ảnh.HeaderText = "Đơn giá bán";
+            this.Ảnh.MinimumWidth = 8;
+            this.Ảnh.Name = "Ảnh";
+            this.Ảnh.Width = 150;
+            // 
             // btnthem
             // 
             this.btnthem.Image = ((System.Drawing.Image)(resources.GetObject("btnthem.Image")));
@@ -309,6 +316,7 @@ namespace ThiCSLT2
             this.btnthem.Text = "Thêm";
             this.btnthem.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnthem.UseVisualStyleBackColor = true;
+            this.btnthem.Click += new System.EventHandler(this.btnthem_Click);
             // 
             // btnluu
             // 
@@ -420,13 +428,6 @@ namespace ThiCSLT2
             this.txtanh.Name = "txtanh";
             this.txtanh.Size = new System.Drawing.Size(206, 26);
             this.txtanh.TabIndex = 35;
-            // 
-            // Ảnh
-            // 
-            this.Ảnh.HeaderText = "Ảnh";
-            this.Ảnh.MinimumWidth = 8;
-            this.Ảnh.Name = "Ảnh";
-            this.Ảnh.Width = 150;
             // 
             // frmsanpham
             // 

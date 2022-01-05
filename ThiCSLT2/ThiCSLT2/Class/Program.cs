@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ThiCSLT2.Forms;
 
 namespace ThiCSLT2
 {
@@ -16,7 +17,7 @@ namespace ThiCSLT2
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmsanpham());
+            Application.Run(new frmmain());
         }
     }
 }
