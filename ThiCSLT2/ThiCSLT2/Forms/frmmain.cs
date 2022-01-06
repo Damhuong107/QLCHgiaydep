@@ -45,8 +45,9 @@ namespace ThiCSLT2.Forms
 
         private void mnusp_Click(object sender, EventArgs e)
         {
-            ThiCSLT2.frmsanpham f = new ThiCSLT2.frmsanpham();
-            f.Show();
+            MessageBox.Show("Bạn đã chọn danh mục sản phẩm");
+            ThiCSLT2.frmsanpham sp = new ThiCSLT2.frmsanpham();
+            sp.Show();
         }
     }
 }
