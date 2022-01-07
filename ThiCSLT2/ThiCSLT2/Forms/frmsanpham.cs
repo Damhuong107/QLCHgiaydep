@@ -156,14 +156,13 @@ namespace ThiCSLT2
             DataGridView.Columns[3].HeaderText = "Mã cỡ";
             DataGridView.Columns[4].HeaderText = "Mã chất liệu";
             DataGridView.Columns[5].HeaderText = "Mã màu";
-            DataGridView.Columns[6].HeaderText = "Mã chất liệu";
-            DataGridView.Columns[7].HeaderText = "Mã đối tượng";
-            DataGridView.Columns[8].HeaderText = "Mã mùa";
-            DataGridView.Columns[9].HeaderText = "Mã nước SX";
-            DataGridView.Columns[10].HeaderText = "Số lượng";
-            DataGridView.Columns[12].HeaderText = "Đơn giá nhập";
-            DataGridView.Columns[13].HeaderText = "Đơn giá bán";
-            DataGridView.Columns[11].HeaderText = "Ảnh";
+            DataGridView.Columns[6].HeaderText = "Mã đối tượng";
+            DataGridView.Columns[7].HeaderText = "Mã mùa";
+            DataGridView.Columns[8].HeaderText = "Mã nước SX";
+            DataGridView.Columns[9].HeaderText = "Số lượng";
+            DataGridView.Columns[11].HeaderText = "Đơn giá nhập";
+            DataGridView.Columns[12].HeaderText = "Đơn giá bán";
+            DataGridView.Columns[10].HeaderText = "Ảnh";
             DataGridView.AllowUserToAddRows = false;
             DataGridView.EditMode = DataGridViewEditMode.EditProgrammatically;
         }
@@ -396,6 +395,35 @@ namespace ThiCSLT2
             txtsoluong.Enabled = true;
             txtdongianhap.Enabled = true;
             txtdongiaban.Enabled = true;
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtsoluong_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (((e.KeyChar >= '0') && (e.KeyChar <= '9') || (Convert.ToInt32(e.KeyChar) == 8)) || (Convert.ToInt32(e.KeyChar) == 13))
+                e.Handled = false;
+            else
+                e.Handled = true;
+        }
+
+        private void txtdongiaban_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (((e.KeyChar >= '0') && (e.KeyChar <= '9') || (Convert.ToInt32(e.KeyChar) == 8)) || (Convert.ToInt32(e.KeyChar) == 13))
+                e.Handled = false;
+            else
+                e.Handled = true;
+        }
+
+        private void txtdongianhap_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (((e.KeyChar >= '0') && (e.KeyChar <= '9') || (Convert.ToInt32(e.KeyChar) == 8)) || (Convert.ToInt32(e.KeyChar) == 13))
+                e.Handled = false;
+            else
+                e.Handled = true;
         }
     }
 }

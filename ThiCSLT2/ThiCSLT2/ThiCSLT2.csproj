@@ -12,6 +12,7 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -24,8 +25,8 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -47,9 +48,22 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>2160D0AF967E306B899573B90269AAEB75C7787B</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>ThiCSLT2_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Device" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -61,7 +75,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BTL_QLGDDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BTL_QLGDDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Class\function.cs" />
+    <Compile Include="Forms\frmbcsp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmbcsp.designer.cs">
+      <DependentUpon>frmbcsp.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\frmchatlieu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,11 +105,29 @@
     <Compile Include="Forms\frmdangnhap.Designer.cs">
       <DependentUpon>frmdangnhap.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\frmdanhmuckhachhang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmdanhmuckhachhang.designer.cs">
+      <DependentUpon>frmdanhmuckhachhang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmdanhmucnhacungcap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmdanhmucnhacungcap.designer.cs">
+      <DependentUpon>frmdanhmucnhacungcap.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\frmdoituong.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\frmdoituong.Designer.cs">
       <DependentUpon>frmdoituong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmhoadonban.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmhoadonban.designer.cs">
+      <DependentUpon>frmhoadonban.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\frmmain.cs">
       <SubType>Form</SubType>
@@ -123,7 +166,40 @@
       <DependentUpon>frmsanpham.cs</DependentUpon>
     </Compile>
     <Compile Include="Class\Program.cs" />
+    <Compile Include="Forms\frmtimkiemhdb.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmtimkiemhdb.designer.cs">
+      <DependentUpon>frmtimkiemhdb.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmtimkiemkhachhang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmtimkiemkhachhang.designer.cs">
+      <DependentUpon>frmtimkiemkhachhang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmtimkiemnhacungcap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmtimkiemnhacungcap.designer.cs">
+      <DependentUpon>frmtimkiemnhacungcap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmtksp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmtksp.Designer.cs">
+      <DependentUpon>frmtksp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frm_bc_sptk.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frm_bc_sptk.Designer.cs">
+      <DependentUpon>frm_bc_sptk.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\frmbcsp.resx">
+      <DependentUpon>frmbcsp.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmchatlieu.resx">
       <DependentUpon>frmchatlieu.cs</DependentUpon>
     </EmbeddedResource>
@@ -133,8 +209,17 @@
     <EmbeddedResource Include="Forms\frmdangnhap.resx">
       <DependentUpon>frmdangnhap.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmdanhmuckhachhang.resx">
+      <DependentUpon>frmdanhmuckhachhang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmdanhmucnhacungcap.resx">
+      <DependentUpon>frmdanhmucnhacungcap.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmdoituong.resx">
       <DependentUpon>frmdoituong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmhoadonban.resx">
+      <DependentUpon>frmhoadonban.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmmain.resx">
       <DependentUpon>frmmain.cs</DependentUpon>
@@ -154,11 +239,37 @@
     <EmbeddedResource Include="Forms\frmsanpham.resx">
       <DependentUpon>frmsanpham.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmtimkiemhdb.resx">
+      <DependentUpon>frmtimkiemhdb.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmtimkiemkhachhang.resx">
+      <DependentUpon>frmtimkiemkhachhang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmtimkiemnhacungcap.resx">
+      <DependentUpon>frmtimkiemnhacungcap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmtksp.resx">
+      <DependentUpon>frmtksp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frm_bc_sptk.resx">
+      <DependentUpon>frm_bc_sptk.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="BTL_QLGDDataSet.xsc">
+      <DependentUpon>BTL_QLGDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="BTL_QLGDDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BTL_QLGDDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BTL_QLGDDataSet.xss">
+      <DependentUpon>BTL_QLGDDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -173,6 +284,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="ThiCSLT2_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -208,6 +320,13 @@
     <None Include="Resources\user_group1.png" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="BTL_QLGD.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="BTL_QLGD_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>BTL_QLGD.mdf</DependentUpon>
+    </Content>
     <Content Include="Resources\jkk.jpg" />
     <None Include="Resources\png-clipart-login-computer-icons-avatar-icon-monochrome-black-thumbnail.png" />
     <Content Include="Resources\tải xuống %282%29d.jpeg" />

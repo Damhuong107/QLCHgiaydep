@@ -25,7 +25,6 @@ namespace ThiCSLT2.Forms
         private void frmdangnhap_Load(object sender, EventArgs e)
         {
             txtusername.Focus();
-            txtpass.Focus();
         }
 
         private void btnthoat_Click(object sender, EventArgs e)
@@ -53,7 +52,7 @@ namespace ThiCSLT2.Forms
             frmmain fm = new frmmain();
             if (this.txtusername.Text == "chgiaydep" && this.txtpass.Text == "de4")
             {
-                fm.ShowDialog();
+                fm.Show();
             }
             dangnhap();
         }
